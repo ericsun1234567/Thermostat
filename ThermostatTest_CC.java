@@ -34,7 +34,7 @@ class ThermostatTest_CC {
 		t.setMinLag(10);
 		assertFalse(result);
 	}
-//	@Test//Predicate 2 Row 1 Evaluated as True
+	@Test//Predicate 2 Row 1 Evaluated as True
 	void ccTruetestp2() {
 		ProgrammedSettings p = new ProgrammedSettings();
 		Thermostat t= new Thermostat();
