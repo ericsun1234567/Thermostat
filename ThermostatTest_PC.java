@@ -34,6 +34,23 @@ class ThermostatTest_PC {
 		t.setTimeSinceLastRun(11);
 		t.setMinLag(10);
 		assertFalse(result);
+	}
+	@Test
+	void pcTruetestp2() {
+		ProgrammedSettings p = new ProgrammedSettings();
+		Thermostat t= new Thermostat();
+		boolean result = t.turnHeaterOn();
+		t.setOverride(true);
+		assertTrue(t.getOverride());
+	}
+	@Test
+	void pcFalsetestp2() {
+		ProgrammedSettings p = new ProgrammedSettings();
+		Thermostat t= new Thermostat();
+		boolean result = t.turnHeaterOn();
+		t.setOverride(false);
+		assertFalse(t.getOverride());
+	}
 
 
 	
