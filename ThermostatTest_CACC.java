@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 class ThermostatTest_CACC {
 
-	@Test
+	@Test//Predicate 1 Row 5 Evaluated as True
 	void ccacTruetestp1() {
 		ProgrammedSettings p = new ProgrammedSettings();
 		Thermostat t= new Thermostat();
@@ -20,7 +20,7 @@ class ThermostatTest_CACC {
 		boolean result = t.turnHeaterOn();
 		assertTrue(result);
 	}
-	@Test
+	@Test//Predicate 1 Row 13 Evaluated as False
 	void ccacFalsetestp1() {
 		ProgrammedSettings p = new ProgrammedSettings();
 		Thermostat t= new Thermostat();
@@ -34,7 +34,7 @@ class ThermostatTest_CACC {
 		t.setMinLag(10);
 		assertFalse(result);
 	}
-	@Test
+	@Test//Predicate 2 Row 1 Evaluated as True
 	void ccacTruetestp2() {
 		ProgrammedSettings p = new ProgrammedSettings();
 		Thermostat t= new Thermostat();
@@ -42,7 +42,7 @@ class ThermostatTest_CACC {
 		t.setOverride(true);
 		assertTrue(t.getOverride());
 	}
-	@Test
+	@Test//Predicate 2 Row 2 Evaluated as False
 	void ccacFalsetestp2() {
 		ProgrammedSettings p = new ProgrammedSettings();
 		Thermostat t= new Thermostat();

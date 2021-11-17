@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 class ThermostatTest_PC {
 
-	@Test
+	@Test//Predicate 1 Row 6 Evaluated as True
 	void pcTruetestp1() {
 		ProgrammedSettings p = new ProgrammedSettings();
 		Thermostat t= new Thermostat();
@@ -21,7 +21,7 @@ class ThermostatTest_PC {
 		boolean result = t.turnHeaterOn();
 		assertTrue(result);
 	}
-	@Test
+	@Test//Predicate 1 Row 11 Evaluated as False
 	void pcFalsetestp1() {
 		ProgrammedSettings p = new ProgrammedSettings();
 		Thermostat t= new Thermostat();
@@ -35,7 +35,7 @@ class ThermostatTest_PC {
 		t.setMinLag(10);
 		assertFalse(result);
 	}
-	@Test
+	@Test//Predicate 2 Row 1 Evaluated as True
 	void pcTruetestp2() {
 		ProgrammedSettings p = new ProgrammedSettings();
 		Thermostat t= new Thermostat();
@@ -43,7 +43,7 @@ class ThermostatTest_PC {
 		t.setOverride(true);
 		assertTrue(t.getOverride());
 	}
-	@Test
+	@Test//Predicate 2 Row 2 Evaluated as False
 	void pcFalsetestp2() {
 		ProgrammedSettings p = new ProgrammedSettings();
 		Thermostat t= new Thermostat();
