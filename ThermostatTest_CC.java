@@ -34,6 +34,21 @@ class ThermostatTest_CC {
 		t.setMinLag(10);
 		assertFalse(result);
 	}
-	
+	@Test
+	void ccTruetestp2() {
+		ProgrammedSettings p = new ProgrammedSettings();
+		Thermostat t= new Thermostat();
+		boolean result = t.turnHeaterOn();
+		t.setOverride(true);
+		assertTrue(t.getOverride());
+	}
+	@Test
+	void ccFalsetestp2() {
+		ProgrammedSettings p = new ProgrammedSettings();
+		Thermostat t= new Thermostat();
+		boolean result = t.turnHeaterOn();
+		t.setOverride(false);
+		assertFalse(t.getOverride());
+	}
 
 }
