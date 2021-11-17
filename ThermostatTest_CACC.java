@@ -34,6 +34,21 @@ class ThermostatTest_CACC {
 		t.setMinLag(10);
 		assertFalse(result);
 	}
-	
+	@Test
+	void ccacTruetestp2() {
+		ProgrammedSettings p = new ProgrammedSettings();
+		Thermostat t= new Thermostat();
+		boolean result = t.turnHeaterOn();
+		t.setOverride(true);
+		assertTrue(t.getOverride());
+	}
+	@Test
+	void ccacFalsetestp2() {
+		ProgrammedSettings p = new ProgrammedSettings();
+		Thermostat t= new Thermostat();
+		boolean result = t.turnHeaterOn();
+		t.setOverride(false);
+		assertFalse(t.getOverride());
+	}
 
 }
